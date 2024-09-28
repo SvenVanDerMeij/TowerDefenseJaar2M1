@@ -6,10 +6,10 @@ public class EnemyMovement : MonoBehaviour
 {
     private bool moving = true;
     public List<GameObject> allpoints = new List<GameObject>();
-    public GameObject[] adjacent;
+    public List<GameObject> adjacent;
     public GameObject firstPoint;
     public GameObject currentTarget;
-    [SerializeField] float speed = 20f;
+    public float speed = 4f;
 
     Vector3 differenceVector;
     
@@ -19,13 +19,14 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentTarget = allpoints[Random.Range(0, allpoints.Count)];
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       // Debug.Log(adjacent);
+       float currentDistance = Vector3.Distance(currentTarget.transform.position, transform.position);
+       Debug.Log(adjacent.Count);
         if (moving == true)
         {
             differenceVector = currentTarget.transform.position - transform.position;
@@ -33,32 +34,32 @@ public class EnemyMovement : MonoBehaviour
             velocity = Direction * speed * Time.deltaTime;
             transform.position += velocity;
         }
-        foreach (GameObject point in allpoints)
-        {
-            if (point.transform.position.y + .5f > transform.position.y && point.transform.position.y - .5f < transform.position.y && point.transform.position.x + .5f > transform.position.x && point.transform.position.x - .5f < transform.position.x)
+        
+            if (currentDistance < 0.2f)
             {
-                moving = false;
-                checkAdjacent();
-                
-
-
+                moving = false;       
+                adjacent.Clear();
             }
-        }
+            if (adjacent.Count == 0) 
+             {
+               checkAdjacent();
+             }
+            
+        
+       
+        
         void checkAdjacent()
         {
             foreach (GameObject point in allpoints)
             {
                 if (point.transform.position.y + .6f > transform.position.y && point.transform.position.y - .6f < transform.position.y || point.transform.position.x + .6f > transform.position.x && point.transform.position.x - .6f < transform.position.x)
                 {
-
-
-                    
-
-
+                    adjacent.Add(point);
+                    currentTarget = adjacent[Random.Range(0, adjacent.Count)];
+                    moving = true;
                 }
             }
+            }
         }
-
-        
     }
-}
+

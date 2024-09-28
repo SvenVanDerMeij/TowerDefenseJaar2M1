@@ -5,6 +5,7 @@ using UnityEngine;
 public class enemySpawner : MonoBehaviour
 {
     [SerializeField]  private List<GameObject> allpoints = new List<GameObject>();
+    [SerializeField]  private List<GameObject> adjacent = new List<GameObject>();
     [SerializeField] GameObject enemy;
 
 
@@ -13,11 +14,14 @@ public class enemySpawner : MonoBehaviour
     {
         GameObject currentEnemy =Instantiate(enemy);
         currentEnemy.GetComponent<EnemyMovement>().allpoints = allpoints;
+        currentEnemy.GetComponent <EnemyMovement>().adjacent = adjacent;
+        currentEnemy.GetComponent<EnemyMovement>().currentTarget = adjacent[Random.Range(0, adjacent.Count)];
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         
     }
 }
