@@ -99,6 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allpoints: []
   adjacent: []
+  deathPoints: []
+  cashPoints: []
   firstPoint: {fileID: 0}
   currentTarget: {fileID: 0}
   speed: 4
