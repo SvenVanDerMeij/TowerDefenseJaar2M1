@@ -13,8 +13,10 @@ public class EnemyMovement : MonoBehaviour
     public GameObject firstPoint;
     public GameObject currentTarget;
     public float speed = 4f;
-    static int cash = 0;
-    static int lives = 100;
+    public static int cash = 0;
+    public static int lives = 100;
+    public GameObject goodpoint;
+    public GameObject badpoint;
 
     Vector3 differenceVector;
     Vector3 rotation;
@@ -57,7 +59,12 @@ public class EnemyMovement : MonoBehaviour
         float newHeading = Mathf.Atan2(differenceVector.y, differenceVector.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, 180+newHeading);
 
+        if (adjacent == null ) 
+        {
+            Debug.Log("je hebt gelijk");
+        }
 
+        
     }
     void checkAdjacent()
     {
@@ -73,17 +80,43 @@ public class EnemyMovement : MonoBehaviour
     }
     void checkLifeOrDeath()
     {
-        if (transform.position.x > 8.5f)
+        if (transform.position.x > 8.2f)
         {
             lives -= 1;
             Destroy(gameObject);
         }
-        if (transform.position.x < -8.5f)
+        if (transform.position.x < -8.2f)
         {
             cash += 1;
             Destroy(gameObject);
         }
     }
+     void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log("ik werk");
+
+        if (col.gameObject.tag == "point") {
+            adjacent.Clear();
+            checkLifeOrDeath();
+            checkAdjacent();
+        }
+
+        if (col.gameObject.tag == "pipe")
+        {
+            goodpoint = col.GetComponent<PipeInfo>().goodSide;
+            badpoint = col.GetComponent<PipeInfo>().badSide;
+        }
+
+        if (col.gameObject.tag == "beam")
+        {
+            hypnotize();
+        }
+    }
+    public void hypnotize()
+    {
+        currentTarget = goodpoint;
+    }
+
 
 }
 

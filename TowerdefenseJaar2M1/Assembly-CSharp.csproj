@@ -61,6 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemies\Movement\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Towers\Attacking\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Towers\Attacking\Attack.cs" />
+    <Compile Include="Assets\Scripts\enviornments\PipeInfo.cs" />
+    <Compile Include="Assets\Scripts\Player\HealthHandler.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawning\enemySpawner.cs" />
     <Compile Include="Assets\Scripts\Player\CashHandler.cs" />
   </ItemGroup>

@@ -387,7 +387,11 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Enemies/Movement/EnemyMovement.cs"
 "Assets/Scripts/Enemies/Spawning/enemySpawner.cs"
+"Assets/Scripts/enviornments/PipeInfo.cs"
 "Assets/Scripts/Player/CashHandler.cs"
+"Assets/Scripts/Player/HealthHandler.cs"
+"Assets/Scripts/Towers/Attacking/Attack.cs"
+"Assets/Scripts/Towers/Attacking/Projectile.cs"
 -langversion:9.0
 
 /deterministic
