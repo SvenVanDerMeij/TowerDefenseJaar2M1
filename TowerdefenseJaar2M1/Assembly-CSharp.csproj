@@ -64,9 +64,11 @@
     <Compile Include="Assets\Scripts\Towers\Attacking\Projectile.cs" />
     <Compile Include="Assets\Scripts\Towers\Attacking\Attack.cs" />
     <Compile Include="Assets\Scripts\enviornments\PipeInfo.cs" />
-    <Compile Include="Assets\Scripts\Player\HealthHandler.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawning\enemySpawner.cs" />
-    <Compile Include="Assets\Scripts\Player\CashHandler.cs" />
+    <Compile Include="Assets\Scripts\Player\UI\HealthHandler.cs" />
+    <Compile Include="Assets\Scripts\Player\control\towerButton.cs" />
+    <Compile Include="Assets\Scripts\Towers\Placing\placeTowers.cs" />
+    <Compile Include="Assets\Scripts\Player\UI\CashHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

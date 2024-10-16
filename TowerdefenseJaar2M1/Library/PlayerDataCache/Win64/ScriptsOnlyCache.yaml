@@ -1,11 +1,19 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Attack
+    - CashHandler
     - EnemyMovement
+    - HealthHandler
+    - PipeInfo
     - enemySpawner
+    - placeTowers
+    - projectile
+    - towerButton
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
+    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
@@ -71,6 +79,17 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.XRSystemData
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -90,6 +109,13 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
   serializedClasses:
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIPrefabBundle
@@ -102,11 +128,31 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset/TextureResources
     - UnityEngine.Rendering.Universal.UniversalRendererData/ShaderResources
     - UnityEngine.Rendering.Universal.XRSystemData/ShaderResources
+    Unity.TextMeshPro:
+    - TMPro.FaceInfo_Legacy
+    - TMPro.FontAssetCreationSettings
+    - TMPro.KerningTable
+    - TMPro.TMP_Character
+    - TMPro.TMP_FontFeatureTable
+    - TMPro.TMP_FontWeightPair
+    - TMPro.TMP_GlyphAdjustmentRecord
+    - TMPro.TMP_GlyphPairAdjustmentRecord
+    - TMPro.TMP_GlyphValueRecord
+    - TMPro.TMP_Sprite
+    - TMPro.TMP_SpriteCharacter
+    - TMPro.TMP_SpriteGlyph
+    - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
     - UnityEngine.RectOffset
+    UnityEngine.TextCoreFontEngineModule:
+    - UnityEngine.TextCore.FaceInfo
+    - UnityEngine.TextCore.Glyph
+    - UnityEngine.TextCore.GlyphMetrics
+    - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
     - UnityEngine.EventSystems.EventTrigger/Entry
     - UnityEngine.EventSystems.EventTrigger/TriggerEvent
@@ -121,6 +167,30 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: towerButton
+    methodName: TowerPick
+  - assembly: Assembly-CSharp
+    fullTypeName: towerButton
+    methodName: TowerPick
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
+    methodName: OnIncrement
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: OnScrollbarClicked
@@ -128,18 +198,6 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: OnScrollbarClicked
   - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
     methodName: OnDecrement
   - assembly: Unity.RenderPipelines.Core.Runtime
@@ -151,12 +209,6 @@ ScriptsOnlyBuild:
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
     methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
-    methodName: OnIncrement
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: ResetDebugManager
@@ -174,108 +226,148 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1764}
+      Script: {instanceID: 1790}
     - Class: 114
-      Script: {instanceID: 1766}
+      Script: {instanceID: 1792}
     - Class: 114
-      Script: {instanceID: 1768}
+      Script: {instanceID: 1794}
     - Class: 114
-      Script: {instanceID: 1770}
+      Script: {instanceID: 1796}
     - Class: 114
-      Script: {instanceID: 1772}
+      Script: {instanceID: 1798}
     - Class: 114
-      Script: {instanceID: 1780}
+      Script: {instanceID: 1806}
     - Class: 114
-      Script: {instanceID: 1810}
+      Script: {instanceID: 1836}
     - Class: 114
-      Script: {instanceID: 1918}
+      Script: {instanceID: 1944}
     - Class: 114
-      Script: {instanceID: 2256}
+      Script: {instanceID: 2282}
     - Class: 114
-      Script: {instanceID: 2472}
+      Script: {instanceID: 2498}
     - Class: 114
-      Script: {instanceID: 2828}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3280}
+      Script: {instanceID: 3306}
     - Class: 114
-      Script: {instanceID: 3350}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 3486}
+      Script: {instanceID: 3512}
     - Class: 114
-      Script: {instanceID: 3812}
+      Script: {instanceID: 3838}
     - Class: 114
-      Script: {instanceID: 4754}
+      Script: {instanceID: 4042}
     - Class: 114
-      Script: {instanceID: 4796}
+      Script: {instanceID: 4780}
     - Class: 114
-      Script: {instanceID: 4856}
+      Script: {instanceID: 4822}
     - Class: 114
-      Script: {instanceID: 4910}
+      Script: {instanceID: 4882}
     - Class: 114
-      Script: {instanceID: 5060}
+      Script: {instanceID: 4936}
     - Class: 114
-      Script: {instanceID: 5076}
+      Script: {instanceID: 5086}
     - Class: 114
-      Script: {instanceID: 5534}
+      Script: {instanceID: 5102}
     - Class: 114
-      Script: {instanceID: 5602}
+      Script: {instanceID: 5560}
     - Class: 114
-      Script: {instanceID: 5698}
+      Script: {instanceID: 5566}
     - Class: 114
-      Script: {instanceID: 5776}
+      Script: {instanceID: 5628}
     - Class: 114
-      Script: {instanceID: 6126}
+      Script: {instanceID: 5724}
     - Class: 114
-      Script: {instanceID: 6178}
+      Script: {instanceID: 5802}
     - Class: 114
-      Script: {instanceID: 6980}
+      Script: {instanceID: 6152}
     - Class: 114
-      Script: {instanceID: 7924}
+      Script: {instanceID: 6204}
     - Class: 114
-      Script: {instanceID: 8058}
+      Script: {instanceID: 7006}
     - Class: 114
-      Script: {instanceID: 8420}
+      Script: {instanceID: 7250}
     - Class: 114
-      Script: {instanceID: 8752}
+      Script: {instanceID: 7890}
     - Class: 114
-      Script: {instanceID: 9042}
+      Script: {instanceID: 7952}
     - Class: 114
-      Script: {instanceID: 9108}
+      Script: {instanceID: 8086}
     - Class: 114
-      Script: {instanceID: 9344}
+      Script: {instanceID: 8266}
     - Class: 114
-      Script: {instanceID: 9428}
+      Script: {instanceID: 8448}
     - Class: 114
-      Script: {instanceID: 9666}
+      Script: {instanceID: 8600}
     - Class: 114
-      Script: {instanceID: 9862}
+      Script: {instanceID: 8782}
     - Class: 114
-      Script: {instanceID: 10342}
+      Script: {instanceID: 8878}
     - Class: 114
-      Script: {instanceID: 10574}
+      Script: {instanceID: 9074}
     - Class: 114
-      Script: {instanceID: 10816}
+      Script: {instanceID: 9140}
     - Class: 114
-      Script: {instanceID: 11098}
+      Script: {instanceID: 9376}
     - Class: 114
-      Script: {instanceID: 11224}
+      Script: {instanceID: 9460}
     - Class: 114
-      Script: {instanceID: 11304}
+      Script: {instanceID: 9698}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 9768}
     - Class: 114
-      Script: {instanceID: 11494}
+      Script: {instanceID: 9894}
     - Class: 114
-      Script: {instanceID: 11632}
+      Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 11882}
+      Script: {instanceID: 10376}
     - Class: 114
-      Script: {instanceID: 12642}
+      Script: {instanceID: 10422}
+    - Class: 114
+      Script: {instanceID: 10608}
+    - Class: 114
+      Script: {instanceID: 10850}
+    - Class: 114
+      Script: {instanceID: 11132}
+    - Class: 114
+      Script: {instanceID: 11258}
+    - Class: 114
+      Script: {instanceID: 11328}
+    - Class: 114
+      Script: {instanceID: 11338}
+    - Class: 114
+      Script: {instanceID: 11420}
+    - Class: 114
+      Script: {instanceID: 11504}
+    - Class: 114
+      Script: {instanceID: 11530}
+    - Class: 114
+      Script: {instanceID: 11668}
+    - Class: 114
+      Script: {instanceID: 11918}
+    - Class: 114
+      Script: {instanceID: 12678}
+    - Class: 114
+      Script: {instanceID: 30858}
+    - Class: 114
+      Script: {instanceID: 45124}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -646,7 +738,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: f8190eec4e0d9843c0d52c738cb999e9
+      Hash: 96acb5ce43214a195258843637b921c5
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: enemySpawner
@@ -1102,6 +1194,12 @@ ScriptsOnlyBuild:
     className: Volume
   - hash:
       serializedVersion: 2
+      Hash: 9dc9e99fd19b97d6dc403c5bca69f144
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PipeInfo
+  - hash:
+      serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1312,6 +1410,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: f4584499b4dedc6b4e3507f6576dd899
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: projectile
+  - hash:
+      serializedVersion: 2
       Hash: aa325cf8525986b1f48a28230d9f514a
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
@@ -1340,6 +1444,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTransformParentChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 2f184bbee76af04d8fbf6f723e78cb0d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CashHandler
   - hash:
       serializedVersion: 2
       Hash: c6369b4cc3be620d6c9300e920bc3d52
@@ -1486,7 +1596,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 20325ccf8c98d23446326c96394ae5a9
+      Hash: 8821fd50700eb8b6639e538a63d88e43
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: EnemyMovement
@@ -1496,6 +1606,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: Vignette
+  - hash:
+      serializedVersion: 2
+      Hash: f7cf56b009153d368ef65edd8baf684a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HealthHandler
   - hash:
       serializedVersion: 2
       Hash: 0b63f6d3335e11939ce8790b904c8691
@@ -1678,6 +1794,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: 294425a8f804c6634f1141f304c76546
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Attack
+  - hash:
+      serializedVersion: 2
       Hash: 67ba98f8a8977f3e60e5f0e049923033
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1832,6 +1954,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 093b20bdc5c277904ee9896c25357eda
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: towerButton
+  - hash:
+      serializedVersion: 2
+      Hash: cf5630cfc2ca0ac140a4a522fc2e32eb
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: placeTowers
   platform: 19
   scenePathNames:
   - Assets/Scenes/Levels/Easy/EasyLevel.unity

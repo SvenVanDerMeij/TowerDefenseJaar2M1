@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - pipe
   - beam
+  - Barrier
   layers:
   - Default
   - TransparentFX

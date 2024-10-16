@@ -9,16 +9,20 @@ public class Attack : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform target;
+    private GameObject litterallyMe;
+    private placeTowers placetowers;
+
     private float attacktimer = 0;
+
 
     void Start()
     {
-      
+        litterallyMe = gameObject;
+        placetowers = litterallyMe.GetComponent<placeTowers>();
     }
-
     // Update is called once per frame
     void Update()
-    {
+    {    
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Enemy");
         if (targets.Length == 0)
         {
@@ -29,24 +33,18 @@ public class Attack : MonoBehaviour
             float dist = Vector2.Distance(transform.position, targets[i].transform.position);
             if (dist < 5)
             {
-                 target = targets[i].transform;
-               // LookAtTarget(target);
+                target = targets[i].transform;
             }
         }
 
         attacktimer += Time.deltaTime;
-        if (attacktimer > 1)
+        
+        if (attacktimer > 1 && litterallyMe.GetComponent<placeTowers>().pickedUp == false)
         {
             GameObject bullet = Instantiate(projectilePrefab);
-            
             bullet.GetComponent<projectile>().target = target;
             bullet.GetComponent<Transform>().position = transform.position;
             attacktimer = 0;
-            
-        }
-
+        }       
     }
-
-   
-   
 }

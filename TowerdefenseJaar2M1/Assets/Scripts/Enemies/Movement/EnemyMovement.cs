@@ -13,7 +13,7 @@ public class EnemyMovement : MonoBehaviour
     public GameObject firstPoint;
     public GameObject currentTarget;
     public float speed = 4f;
-    public static int cash = 0;
+    public static int cash = 75;
     public static int lives = 100;
     public GameObject goodpoint;
     public GameObject badpoint;
@@ -108,6 +108,10 @@ public class EnemyMovement : MonoBehaviour
         }
 
         if (col.gameObject.tag == "beam")
+        {
+            hypnotize();
+        }
+        if (col.gameObject.tag == "Barrier")
         {
             hypnotize();
         }

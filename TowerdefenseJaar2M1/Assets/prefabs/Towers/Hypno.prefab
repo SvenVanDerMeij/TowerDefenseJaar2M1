@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8285809938752542375}
   - component: {fileID: 3437628188447407997}
   - component: {fileID: 6359100249315291261}
+  - component: {fileID: 5939545018184470648}
   m_Layer: 0
   m_Name: Hypno
   m_TagString: Untagged
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5625166426914535120, guid: 97e6326a7905d5544a9e65676cc3c43a, type: 3}
   target: {fileID: 0}
+  litterallyMe: {fileID: -2253911629886400664, guid: f469d736418298c4996934c135bcdaa9, type: 3}
 --- !u!95 &6359100249315291261
 Animator:
   serializedVersion: 5
@@ -121,3 +123,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5939545018184470648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4768301529569513306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4a2556b8315a04c8900ad0757f26f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickedUp: 0

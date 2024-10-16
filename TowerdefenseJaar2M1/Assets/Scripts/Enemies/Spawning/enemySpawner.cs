@@ -6,6 +6,7 @@ using UnityEngine;
 public class enemySpawner : MonoBehaviour
 {
     private float time = 0;
+    private float attackSpeed = 1;
     [SerializeField] private List<GameObject> allpoints = new List<GameObject>();
     [SerializeField] private List<GameObject> adjacent = new List<GameObject>();
     [SerializeField] private List<GameObject> deathPoints = new List<GameObject>();
@@ -31,7 +32,8 @@ public class enemySpawner : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > 1) 
+        attackSpeed -= (Time.deltaTime)/100;
+        if (time > attackSpeed) 
         {
             GameObject currentEnemy = Instantiate (enemy);
             currentEnemy.GetComponent<EnemyMovement>().deathPoints = deathPoints;

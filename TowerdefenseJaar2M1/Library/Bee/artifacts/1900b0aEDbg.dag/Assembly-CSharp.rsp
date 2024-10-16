@@ -388,10 +388,12 @@
 "Assets/Scripts/Enemies/Movement/EnemyMovement.cs"
 "Assets/Scripts/Enemies/Spawning/enemySpawner.cs"
 "Assets/Scripts/enviornments/PipeInfo.cs"
-"Assets/Scripts/Player/CashHandler.cs"
-"Assets/Scripts/Player/HealthHandler.cs"
+"Assets/Scripts/Player/control/towerButton.cs"
+"Assets/Scripts/Player/UI/CashHandler.cs"
+"Assets/Scripts/Player/UI/HealthHandler.cs"
 "Assets/Scripts/Towers/Attacking/Attack.cs"
 "Assets/Scripts/Towers/Attacking/Projectile.cs"
+"Assets/Scripts/Towers/Placing/placeTowers.cs"
 -langversion:9.0
 
 /deterministic
