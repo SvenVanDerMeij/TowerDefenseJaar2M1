@@ -6,9 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menus/mainMenu.unity
+    guid: 730880e0e1f245c46bf9823fba66ce44
+  - enabled: 1
+    path: Assets/Scenes/Menus/Tutorial.unity
+    guid: 77090c3bcc4de894eaa60407f35f6d6a
+  - enabled: 1
+    path: Assets/Scenes/Menus/LevelSelect.unity
+    guid: 141c20441178a364a997cb8896e05313
+  - enabled: 1
     path: Assets/Scenes/Levels/Easy/EasyLevel.unity
     guid: f72a073983161714db13ddd2ce538d9a
   - enabled: 1
+    path: Assets/Scenes/Levels/Medium/MediumLevel.unity
+    guid: db2d4e10b5954cb41bdfc9f73a26e162
+  - enabled: 1
     path: Assets/Scenes/Levels/hard/hardlevel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menus/Winner.unity
+    guid: 7601528e0b3c8ed479a14492e56b3402
+  - enabled: 1
+    path: Assets/Scenes/Menus/Loser.unity
+    guid: 65b7c6e3efdfb814bba440057bbb82a7
   m_configObjects: {}

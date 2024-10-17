@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class HealthHandler : MonoBehaviour
 {
     
@@ -18,5 +18,10 @@ public class HealthHandler : MonoBehaviour
     {
         health = GetComponent<TMP_Text>();  
         health.text = "health: " + EnemyMovement.lives;
+
+        if (EnemyMovement.lives < 1)
+        {
+            SceneManager.LoadSceneAsync(7);
+        }
     }
 }

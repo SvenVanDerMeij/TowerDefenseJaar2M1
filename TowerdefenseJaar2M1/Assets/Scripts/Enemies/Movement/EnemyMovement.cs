@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
     public GameObject currentTarget;
     public float speed = 4f;
     public static int cash = 75;
-    public static int lives = 100;
+    public static int lives = 50;
     public GameObject goodpoint;
     public GameObject badpoint;
 

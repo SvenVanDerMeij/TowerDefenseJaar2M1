@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Towers\Attacking\Projectile.cs" />
     <Compile Include="Assets\Scripts\Towers\Attacking\Attack.cs" />
     <Compile Include="Assets\Scripts\enviornments\PipeInfo.cs" />
+    <Compile Include="Assets\Scripts\Scenes\SceneSwitcher.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawning\enemySpawner.cs" />
     <Compile Include="Assets\Scripts\Player\UI\HealthHandler.cs" />
     <Compile Include="Assets\Scripts\Player\control\towerButton.cs" />
@@ -86,6 +87,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile 1.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
