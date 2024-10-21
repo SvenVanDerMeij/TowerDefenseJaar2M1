@@ -21,4 +21,11 @@ https://github.com/SvenVanDerMeij/TowerDefenseJaar2M1/tree/main/TowerdefenseJaar
 hier zie je dat ik een animatie heb geimport die voldoet aan de power of 2, en werkt in de game
 
 Leerdoel 5:
+https://github.com/SvenVanDerMeij/TowerDefenseJaar2M1/issues/1
+het probleem hier is dat de speler niet dood gaat, alleen ik heb != gebruikt ipv ==
+
+Leerdoel 6: 
+Wat ik denk dat mijn game replayable maakt is dat je verschillende levels hebt die je kan spelen met verschillende difficulties, dit maakt het zo dat zelfs als je de game uitspeelt, je de game nogsteeds opnieuw uit kan spelen op andere moeilijkheidsgraaden
+
+Leerdoel 7:
 
