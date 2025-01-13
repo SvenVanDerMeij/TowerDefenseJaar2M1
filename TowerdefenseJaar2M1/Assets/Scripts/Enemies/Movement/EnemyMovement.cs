@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     public static int lives = 50;
     public GameObject goodpoint;
     public GameObject badpoint;
+    public float multiplier;
 
     Vector3 differenceVector;
     Vector3 rotation;
@@ -29,7 +30,7 @@ public class EnemyMovement : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
 
@@ -41,7 +42,9 @@ public class EnemyMovement : MonoBehaviour
         {
             differenceVector = currentTarget.transform.position - transform.position;
             Direction = differenceVector.normalized;
-            velocity = Direction * speed * Time.deltaTime;
+            
+         
+            velocity = Direction * speed * multiplier * Time.deltaTime;
             transform.position += velocity;
         }
 
@@ -61,7 +64,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (adjacent == null ) 
         {
-            Debug.Log("je hebt gelijk");
+          //  Debug.Log("je hebt gelijk");
         }
 
         
@@ -93,7 +96,7 @@ public class EnemyMovement : MonoBehaviour
     }
      void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("ik werk");
+       // Debug.Log("ik werk");
 
         if (col.gameObject.tag == "point") {
             adjacent.Clear();

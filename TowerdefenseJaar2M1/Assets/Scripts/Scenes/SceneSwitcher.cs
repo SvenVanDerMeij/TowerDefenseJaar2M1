@@ -10,8 +10,10 @@ public class SceneSwitcher : MonoBehaviour
     {
         EnemyMovement.lives = 50;
         EnemyMovement.cash = 75;
-        towerButton.barrierPlaced = false;
-         SceneManager.LoadSceneAsync(sceneID);                      
+        TowerButton.barrierPlaced = false;
+         SceneManager.LoadSceneAsync(sceneID);               
+        
+       
     }
     public void QuitGame()
     {

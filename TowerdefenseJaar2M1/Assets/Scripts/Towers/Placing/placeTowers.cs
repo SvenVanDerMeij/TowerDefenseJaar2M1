@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class placeTowers : MonoBehaviour
+public class PlaceTowers : MonoBehaviour
 {
     public bool pickedUp = false;
     private Camera cam;
@@ -23,7 +23,7 @@ public class placeTowers : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && pickedUp == true)
         {
             pickedUp = false;
-            towerButton.mousefull = false;
+            TowerButton.mousefull = false;
         }
     }
 }

@@ -5,12 +5,11 @@ using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
 public class Attack : MonoBehaviour
-{
-    // Start is called before the first frame update
+{ 
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform target;
     private GameObject litterallyMe;
-    private placeTowers placetowers;
+    private PlaceTowers placetowers;
 
     private float attacktimer = 0;
 
@@ -18,7 +17,7 @@ public class Attack : MonoBehaviour
     void Start()
     {
         litterallyMe = gameObject;
-        placetowers = litterallyMe.GetComponent<placeTowers>();
+        placetowers = litterallyMe.GetComponent<PlaceTowers>();
     }
     // Update is called once per frame
     void Update()
@@ -39,7 +38,7 @@ public class Attack : MonoBehaviour
 
         attacktimer += Time.deltaTime;
         
-        if (attacktimer > 1 && litterallyMe.GetComponent<placeTowers>().pickedUp == false)
+        if (attacktimer > 1 && gameObject.GetComponent<PlaceTowers>().pickedUp == false)
         {
             GameObject bullet = Instantiate(projectilePrefab);
             bullet.GetComponent<projectile>().target = target;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class towerButton : MonoBehaviour
+public class TowerButton : MonoBehaviour
 {
 
     [SerializeField] GameObject hypnoTower;
@@ -13,7 +13,7 @@ public class towerButton : MonoBehaviour
     static public bool barrierPlaced = false;
     // Start is called before the first frame update
 
-    public void TowerPick()
+    public void TowerPick(int index)
     {
         switch (button)
         {
@@ -21,17 +21,17 @@ public class towerButton : MonoBehaviour
                 if (EnemyMovement.cash > 50 && mousefull == false)
                 {
                     GameObject Tower = Instantiate(hypnoTower);
-                    Tower.GetComponent<placeTowers>().pickedUp = true;
+                    Tower.GetComponent<PlaceTowers>().pickedUp = true;
                     mousefull = true;
                     EnemyMovement.cash -= 50;
                 }
                 break;
             case 1:
-                if (mousefull == false && barrierPlaced == false) 
+                if (mousefull == false && barrierPlaced == false)
                 {
                     GameObject Barrier = Instantiate(barrier);
-                    Barrier.GetComponent<placeTowers>().pickedUp = true;
-                    mousefull=true;
+                    Barrier.GetComponent<PlaceTowers>().pickedUp = true;
+                    mousefull = true;
                     barrierPlaced = true;
                 }
                 break;
