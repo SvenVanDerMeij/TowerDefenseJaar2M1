@@ -386,15 +386,15 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Enemies/Movement/EnemyMovement.cs"
-"Assets/Scripts/Enemies/Spawning/enemySpawner.cs"
+"Assets/Scripts/Enemies/Spawning/EnemySpawner.cs"
 "Assets/Scripts/enviornments/PipeInfo.cs"
-"Assets/Scripts/Player/control/towerButton.cs"
+"Assets/Scripts/Player/control/TowerButton.cs"
 "Assets/Scripts/Player/UI/CashHandler.cs"
 "Assets/Scripts/Player/UI/HealthHandler.cs"
 "Assets/Scripts/Scenes/SceneSwitcher.cs"
 "Assets/Scripts/Towers/Attacking/Attack.cs"
 "Assets/Scripts/Towers/Attacking/Projectile.cs"
-"Assets/Scripts/Towers/Placing/placeTowers.cs"
+"Assets/Scripts/Towers/Placing/PlaceTowers.cs"
 -langversion:9.0
 
 /deterministic

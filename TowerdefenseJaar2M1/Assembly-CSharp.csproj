@@ -9,8 +9,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{AC416C15-C094-CBC8-0413-FA46EF510F87}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -68,8 +67,8 @@
     <Compile Include="Assets\Scripts\Scenes\SceneSwitcher.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawning\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Player\UI\HealthHandler.cs" />
-    <Compile Include="Assets\Scripts\Player\control\TowerButton.cs" />
     <Compile Include="Assets\Scripts\Towers\Placing\PlaceTowers.cs" />
+    <Compile Include="Assets\Scripts\Player\control\TowerButton.cs" />
     <Compile Include="Assets\Scripts\Player\UI\CashHandler.cs" />
   </ItemGroup>
   <ItemGroup>
